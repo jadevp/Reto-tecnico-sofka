@@ -12,11 +12,13 @@ import com.retosofka.estacionespacialsofka.Model.Nave;
 
 import com.retosofka.estacionespacialsofka.service.NaveService;
 
+// Comentario: Este controlador maneja las operaciones relacionadas con la clase Nave, incluyendo 
+// la visualizacion de la lista de naves y la creacion de nuevas naves
 @Controller
 public class NavesController {
 
     @Autowired
-    private NaveService naveService;
+    private NaveService naveService; // Comentario: Inyeccion de dependencia para la clase NaveService
 
     @GetMapping("/")
     public String principal(Model model) {
@@ -24,13 +26,13 @@ public class NavesController {
         return "inventario";
     }
 
-    @GetMapping("/inventario")
+    @GetMapping("/inventario") // Comentario: Mapeo que devuelve la vista de la lista de naves en el inventario
     public String list(Model model) {
         model.addAttribute("inventario", naveService.getAllNaves());
         return "inventario";
     }
 
-    @GetMapping("/inventario/new")
+    @GetMapping("/inventario/new") // Comentario: Mapeo que devuelve la vista para crear una nueva nave
     public String createNaveForm(Model model) {
         Nave nave = new Nave();
         model.addAttribute("nave", nave);
@@ -38,8 +40,9 @@ public class NavesController {
         return "crear-nave";
     }
 
-    @PostMapping("/inventario")
+    @PostMapping("/inventario") // Comentario: Mapeo que maneja la creacion de una nueva nave
     public String createNave(@ModelAttribute("nave") Nave nave) {
+        // Comentario: Verifica el tipo de nave y establece el valor en mayusculas
         switch (nave.getTipoNave()) {
             case "nave no tripuladas":
                 nave.setTipoNave("Nave-no-tripuladas");
@@ -54,7 +57,7 @@ public class NavesController {
                 return ("Tipo de nave inválido");
 
         }
-        naveService.saveNave(nave);
+        naveService.saveNave(nave); // Comentario: Llama al metodo saveNave en NaveService para guardar
         return "redirect:/inventario";
     }
 }
