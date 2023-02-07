@@ -13,4 +13,8 @@ La clase abstracta Nave es la clase padre que contiene métodos abstractos y se 
 
 Este proyecto es un ejemplo práctico de cómo aplicar los conceptos clave de programación orientada a objetos en un proyecto real de aplicación web.
 
+Vista - creacion de naves
 ![image](https://user-images.githubusercontent.com/111543414/217333693-218b18fc-a136-42de-b59c-68040f52f0db.png)
+
+Vista - listado de naves
+![image](https://user-images.githubusercontent.com/111543414/217334015-02d5ef11-2e48-469f-aec3-57d90d3b5a8d.png)
