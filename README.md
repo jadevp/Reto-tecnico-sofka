@@ -12,3 +12,5 @@ El proyecto se basa en los conceptos clave de programación orientada a objetos,
 La clase abstracta Nave es la clase padre que contiene métodos abstractos y se utiliza para crear diferentes tipos de naves. Las clases hijas son Nave Lanzador, Nave Tripulada, Nave No Tripulada. Se realizó sobrecarga y sobreescritura de métodos en algunas de las clases hijas.
 
 Este proyecto es un ejemplo práctico de cómo aplicar los conceptos clave de programación orientada a objetos en un proyecto real de aplicación web.
+
+![image](https://user-images.githubusercontent.com/111543414/217333693-218b18fc-a136-42de-b59c-68040f52f0db.png)
